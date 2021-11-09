@@ -15,6 +15,12 @@ public class PostsController {
     @Autowired
     private PostDAO postDAO;
 
+    @GetMapping("/upload")
+    public String provideUploadInfo() {
+        return "posts/upload";
+    }
+
+
     @GetMapping()
     public String allPosts(Model model){
         model.addAttribute("posts",postDAO.getAllPosts());
