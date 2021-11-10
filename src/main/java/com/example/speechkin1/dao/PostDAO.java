@@ -3,6 +3,7 @@ package com.example.speechkin1.dao;
 import com.example.speechkin1.models.Post;
 import com.example.speechkin1.repository.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,8 +21,9 @@ public class PostDAO {
 
 
     public List<Post> getAllPosts() {
-        return postsRepository.findAll();
+        return postsRepository.findAll(Sort.by(Sort.Direction.DESC,"id"));
     }
+
 
     public Post getPostById(int id) {
 
