@@ -19,8 +19,7 @@ import javax.servlet.MultipartConfigElement;
 @Configuration
 @ComponentScan("com.example.speechkin1")
 @EnableWebMvc
-public class SpringConfig implements WebMvcConfigurer
-{
+public class SpringConfig implements WebMvcConfigurer {
     private final ApplicationContext applicationContext;
 
     @Autowired
@@ -53,7 +52,7 @@ public class SpringConfig implements WebMvcConfigurer
     }
 
     @Bean
-    MultipartConfigElement multipartConfigElement(){
+    MultipartConfigElement multipartConfigElement() {
         MultipartConfigFactory factory = new MultipartConfigFactory();
         //factory.setMaxFileSize("256KB");
         //factory.setMaxRequestSize(DataSize.parse("128KB"));

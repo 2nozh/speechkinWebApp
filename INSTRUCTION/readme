@@ -1,0 +1,9 @@
+download file speechkin.war
+place it into root tomcat server directory,
+to dir "webapps"
+(...\apache-tomcat-8.5.50\apache-tomcat-8.5.50\webapps\)
+start server by executing file startup.bat
+(...\apache-tomcat-8.5.50\apache-tomcat-8.5.50\bin\)
+by finding it in directory, or with cmd
+war file will be deployed, making available homepage:
+http://localhost:8080/speechkin/posts

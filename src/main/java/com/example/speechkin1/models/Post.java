@@ -16,8 +16,17 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Post {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String title;
     private String body;
+
+    public String getPreview(int symbols) {
+        if (getBody().length() > symbols) {
+            return getBody().substring(0, symbols);
+        } else {
+            return getBody();
+        }
+
+    }
 }
