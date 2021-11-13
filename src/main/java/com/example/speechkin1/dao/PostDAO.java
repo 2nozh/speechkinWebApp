@@ -7,6 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Calendar;
 import java.util.List;
 
 @Component
@@ -31,7 +32,7 @@ public class PostDAO {
     }
 
     public void addPost(Post post) {
-
+        post.setDate(Calendar.getInstance().getTime());
         postsRepository.save(post);
     }
 
